@@ -1,0 +1,16 @@
+{
+  "name": "futbol-bot",
+  "version": "1.0.0",
+  "description": "Futbol maydonini band qilish Telegram boti",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "telegraf": "^4.16.3"
+  }
+}

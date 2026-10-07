@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: futbol-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: TZ
+        value: Asia/Tashkent
+      - key: ADMIN_IDS
+        value: "7830914938"
+      - key: BOT_TOKEN
+        sync: false        # tokenni Render panelida o'zingiz kiritasiz
+      # Bronlar o'chib ketmasligi uchun (pullik Disk kerak):
+      # - key: DB_PATH
+      #   value: /var/data/bookings.db
+# Disk uchun (faqat pullik reja):
+#    disk:
+#      name: data
+#      mountPath: /var/data
+#      sizeGB: 1
